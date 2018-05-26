@@ -1,2 +1,4 @@
-presentation:
-	jupyter nbconvert gzip.ipynb --to slides --post serve
+default:	index.html
+
+index.html:	index.ipynb
+		jupyter nbconvert --execute index.ipynb
