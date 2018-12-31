@@ -1,0 +1,40 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "<none>"
+%%% End:
+
+\title{gzip}
+
+\author{Vicente González Ruiz}
+
+\maketitle
+\section{Basics}
+\begin{itemize}
+\item
+  \texttt{gzip} (GNU zip) is a open-source text compressor, written by
+  Mark Adler and Jean-loup Gailly.
+\item
+  Implements \href{https://en.wikipedia.org/wiki/DEFLATE}{DEFLATE
+algorithm}~\cite{deutsch1996deflate, deutsch1996gzip} created by Phil Katz.
+\end{itemize}
+
+\section{DEFLATE}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Divide the input into blocks.
+\item
+  LZ77 encode each block.
+\item
+  Compute a Huffman tree for the offsets.
+\item
+  Huffman encode the Huffman tree using a static probabilistic model.
+\item
+  Huffman encode each block using an adaptive probabilistic model.
+\end{enumerate}
+
+\subsection{Lab: GZIP}
+\href{https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/gzip/blob/master/gzip.ipynb}{IPython notebook}
+
+\bibliography{text-compression}

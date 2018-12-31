@@ -1,4 +1,3 @@
-default:	index.html
+include $(HOME)/LaTeX_templates/Makefile
 
-index.html:	index.ipynb
-		jupyter nbconvert --execute index.ipynb
+default:	index.html
